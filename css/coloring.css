@@ -1,0 +1,43 @@
+/* font-family: NMSFuturaProBook */
+@import url("https://font.nmscd.com/assets/font/NMSFuturaProBook_Kerned/Web-TT/NMSFuturaProBook_Kerned.css");
+/* font-family: NMSGeoSans */
+@import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
+
+html {
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+button {
+  border-color: #555;
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  border-color: #555;
+}
+
+#currentTitle,
+#currentArtist {
+  color: #b0e0ff;
+}
+
+hr {
+  color: #555;
+  border-color: #555;
+}
+
+#creditz {
+  background-color: #000000bb;
+  border-top-color: #555;
+}
+
+#creditzContainer {
+  background-color: #000;
+  border-color: #555;
+}

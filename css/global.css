@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "3270";
+  src: url(../fonts/3270/3720-Regular.woff) format('woff'),
+       url(../fonts/3720/3270-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "3270", sans-serif;
+  font-size: 40px;
+}
+
+* {
+  cursor: none !important;
+}
+
+#custom-pointer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  width: 1440px;
+  height: 2447px;
+  background: url(../assets/Hand.png) no-repeat;
+  background-size: contain;
+  top: -3000px;
+  left: -3000px;
+  transform: translate(-5.7%, -4.5%);
+  will-change: left, top;
+}
