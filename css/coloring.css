@@ -4,12 +4,12 @@
 @import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
 
 html {
-  background-color: #000;
-  color: #fff;
+  background-color: #a3a599;
+  color: #01fc01;
 }
 
 a {
-  color: #fff;
+  color: #01fc01;
 }
 
 button {
@@ -18,8 +18,14 @@ button {
   color: #fff;
 }
 
-header {
-  border-color: #555;
+#helmetTop {
+  background-color: #444;
+  border-color: #31302b;
+}
+
+#helmetBottom {
+  background-color: #777;
+  border-color: #31302b;
 }
 
 #currentTitle,
@@ -27,17 +33,11 @@ header {
   color: #b0e0ff;
 }
 
-hr {
-  color: #555;
-  border-color: #555;
-}
-
-#creditz {
-  background-color: #000000bb;
-  border-top-color: #555;
-}
-
-#creditzContainer {
+#monitorBackground {
   background-color: #000;
-  border-color: #555;
 }
+
+#monitorDetail {
+  background-color: #282b26;
+}
+
