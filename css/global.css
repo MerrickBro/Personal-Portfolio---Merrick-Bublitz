@@ -7,17 +7,22 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   font-family: "3270", sans-serif;
   font-size: 40px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 * {
   cursor: none !important;
+}
+
+.inactive {
+  display: none !important;
 }
 
 #custom-pointer {
@@ -83,7 +88,7 @@ html, body {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-  transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0);
 }
 
 #visual {
@@ -100,7 +105,7 @@ html, body {
 #screenBorder1 {
   width: 80%;
   height: 65%;
-  border: 3px solid #5c5a51;
+  border: 3px solid;
 }
 
 #screenBorder2 {
@@ -108,23 +113,20 @@ html, body {
   width: 100%;
   height: 100%;
   border: 70px solid;
-  border-image: linear-gradient(to bottom right, #aba485, #625f49) 1;
 }
 
 #screenBorder3 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 3px solid #46443e;
+  border: 3px solid;
 }
 
 #screenBorder4 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 65px solid #2a2f16;
-  border-right-color: #888960;
-  border-bottom-color: #888960;
+  border: 65px solid;
 }
 
 #monitorBackground {
@@ -146,12 +148,37 @@ html, body {
   z-index: 49;
 }
 
-#monitor {
+.active {
   position: relative;
   box-sizing: border-box;
   width: 97%;
   height: 97%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   z-index: 50;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: 2px;
+  background-size: 40px 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+#startingScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutMeText {
+  font-size: 10px;
 }

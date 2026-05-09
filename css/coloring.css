@@ -8,14 +8,8 @@ html {
   color: #01fc01;
 }
 
-a {
+html, a, hr, button {
   color: #01fc01;
-}
-
-button {
-  border-color: #555;
-  background-color: #333;
-  color: #fff;
 }
 
 #helmetTop {
@@ -33,6 +27,24 @@ button {
   color: #b0e0ff;
 }
 
+#screenBorder1 {
+  border-color: #5c5a51;
+}
+
+#screenBorder2 {
+  border-image: linear-gradient(to bottom right, #aba485, #625f49) 1;
+}
+
+#screenBorder3 {
+  border-color: #46443e;
+}
+
+#screenBorder4 {
+  border-color: #2a2f16;
+  border-right-color: #888960;
+  border-bottom-color: #888960;
+}
+
 #monitorBackground {
   background-color: #000;
 }
@@ -41,3 +53,6 @@ button {
   background-color: #282b26;
 }
 
+hr {
+  background-image: linear-gradient(to right, #01fc01 75%, transparent 25%);
+}
