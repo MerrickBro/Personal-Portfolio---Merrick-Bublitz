@@ -25,6 +25,10 @@ body {
   display: none !important;
 }
 
+p {
+  margin: 0;
+}
+
 #custom-pointer {
   position: fixed;
   pointer-events: none;
@@ -92,14 +96,48 @@ body {
 }
 
 #visual {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
-  width: 140%;
+  flex-direction: column;
+  width: 250%;
   height: 200%;
   align-items: center;
   justify-content: center;
   transform: rotateX(0deg);
   transform: translateY(0px);
+}
+
+#outerDetail1 {
+  overflow: visible;
+  width: 300%;
+  height: 100px;
+  background-image: linear-gradient(to bottom, #d2c5ad,  #2a2f16);
+  border: 3px solid;
+  margin-bottom: -15px;
+}
+
+#outerDetail3 {
+  overflow: visible;
+  width: 300%;
+  height: 100px;
+  border: 3px solid;
+  margin-top: -15px;
+}
+
+#outerDetail2 {
+  overflow: visible;
+  width: 300%;
+  height: 200px;
+  border: 3px solid;
+  margin-bottom: 15px;
+}
+
+#outerDetail4 {
+  overflow: visible;
+  width: 300%;
+  height: 200px;
+  border: 3px solid;
+  margin-top: 15px;
 }
 
 #screenBorder1 {
@@ -173,6 +211,26 @@ button {
   font: inherit;
 }
 
+li {
+  list-style: square;
+  font-size: 35px;
+}
+
+ul {
+  margin: 0px;
+}
+
+#menuScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuButton {
+  width: 100%;
+}
+
 #startingScreen {
   display: flex;
   justify-content: center;
@@ -180,5 +238,23 @@ button {
 }
 
 #aboutMeText {
-  font-size: 10px;
+  font-size: 25px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#musicPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  width: 100%;
+}
+
+#certificationsText {
+  margin-top: 40px;
 }

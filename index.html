@@ -16,6 +16,8 @@
         </div>
         <section id="perspective">
             <div id="visual">
+                <div id="outerDetail2"></div>
+                <div id="outerDetail1"></div>
                 <div id="screenBorder1">
                     <div id="screenBorder2">
                         <div id="screenBorder3">
@@ -28,28 +30,98 @@
                                         <hr>
                                     </div>
                                     <div id="menuScreen" class="inactive">
-                                        > WELCOME
+                                        <p>> WELCOME</p>
                                         <hr>
                                         <div id="aboutMe">
                                             > ABOUT ME
-                                            <p>My name is Merrick Bublitz, I am a student in Michigan, currently attending Western High School, and The BAISD Career Center.</p>
+                                            <p id="aboutMeText">My name is Merrick Bublitz, I am a student in Michigan, currently attending Western High School, and The BAISD Career Center.</p>
                                         </div>
                                         <hr>
-                                        <button id="skillsButton" class="menuButton">
+                                        <button id="skillsButton" class="menuButton" onclick="screenSwitch('skillsScreen')">
                                             > SKILLS
                                         </button>
-                                        <button id="projectsButton" class="menuButton">
+                                        <button id="projectsButton" class="menuButton" onclick="screenSwitch('projectsScreen')">
                                             > PROJECTS
                                         </button>
-                                        <button id="experienceButton" class="menuButton">
+                                        <button id="experienceButton" class="menuButton" onclick="screenSwitch('experienceScreen')">
                                             > EXPERIENCE
                                         </button>
+                                        <div id="musicPlayer">
+                                            > MUSIC PLAYER
+                                            <div id="musicControls">
+                                                <button id="prevButton" onclick="prevTrack()"><</button>
+                                                <button id="playPauseButton" onclick="togglePlay()">X</button>
+                                                <button id="nextButton" onclick="nextTrack()">></button>
+                                            </div>
+                                            <p id="trackInfo">
+                                                <p id="currentTitle">TITLE</p>
+                                                BY
+                                                <p id="currentArtist">ARTIST</p>
+                                                <a id="musicCreditButton" href="https://www.youtube.com/watch?v=65x-YZRLc5A" target="_blank">LINK</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="skillsScreen" class="inactive">
+                                        <div id="skillsHeader" class="sectionHeader">
+                                            > SKILLS
+                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                RETURN
+                                            </button>
+                                        </div>
+                                        <hr>
+                                        <ul>
+                                            <li>Java</li>
+                                            <li>Python</li>
+                                            <li>JavaScript</li>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>Git</li>
+                                            <li>SQL</li>
+                                            <li>VS Code</li>
+                                            <li>OOP</li>
+                                            <li>Troubleshooting</li>
+                                            <li>Data Structures</li>
+                                        </ul>
+                                        <p id="certificationsText">> CERTIFICATIONS</p>
+                                        <ul>
+                                            <li>BAISD Career Center - Student Success Certificate,
+                                                <br>ISS: 04/2026
+                                            </li>
+                                            <li>IC3 Digital Literacy Certification GS6 Master,
+                                                <br>ISS: 04/2026
+                                            </li>
+                                            <li>IT Specialist - Java,
+                                                <br>EXP: 04/2031
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="projectsScreen" class="inactive">
+                                        <div id="projectsHeader" class="sectionHeader">
+                                            > PROJECTS
+                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                RETURN
+                                            </button>
+                                        </div>
+                                        <hr>
+                                        <p>PROJECTS GO HERE</p>
+                                    </div>
+                                    <div id="experienceScreen" class="inactive">
+                                        <div id="experienceHeader" class="sectionHeader">
+                                            > EXPERIENCE
+                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                RETURN
+                                            </button>
+                                        </div>
+                                        <hr>
+                                        <p>EXPERIENCE GOES HERE</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div id="outerDetail3"></div>
+                <div id="outerDetail4"></div>
             </div>
         </section>
         <script rel="javascript" src="app.js"></script>

@@ -33,8 +33,8 @@ let displayCurrentTrackInfo = (index) => {
     let track = tracks[index];
     if (!track) return;
 
-    //document.getElementById("currentTitle").textContent = track.title;
-    //document.getElementById("currentArtist").textContent = track.artist;
+    document.getElementById("currentTitle").textContent = track.title;
+    document.getElementById("currentArtist").textContent = track.artist;
 };
 
 // Play the first track on page load
@@ -54,14 +54,29 @@ let playTrack = (index) => {
     displayCurrentTrackInfo(index);
 };
 
-// Play next track when current one ends
-let playNextTrack = () => {
+// Play next track
+let nextTrack = () => {
     let nextIndex = (currentAudioIndex + 1) % tracks.length;
     playTrack(nextIndex);
 };
 
+// Play previous track
+let prevTrack = () => {
+    let prevIndex = (currentAudioIndex - 1 + tracks.length) % tracks.length;
+    playTrack(prevIndex);
+};
+
+// Toggle play/pause
+let togglePlay = () => {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+};
+
 // Play the next track when the current one ends
-audio.addEventListener("ended", playNextTrack);
+audio.addEventListener("ended", nextTrack);
 
 
 
@@ -111,7 +126,7 @@ function animate() {
 
         // Calculate rotation and translation based on visualY
         let rotationX = (visualY / centerY) * 20;
-        let translateY = (visualY / centerY) * 200;
+        let translateY = (visualY / centerY) * 300;
         let rotationY = (visualX / centerX) * 20;
         let translateX = (visualX / centerX) * 200;
 
@@ -130,14 +145,14 @@ animate();
 // --== Simple Screen Switching ==--
 let currentScreen = "startingScreen";
 
-let pageSwitch = (targetScreen) => {
+let screenSwitch = (targetScreen) => {
     document.getElementById(currentScreen).className = "inactive";
     document.getElementById(targetScreen).className = "active";
     currentScreen = targetScreen;
 }
 
 // Simple button hover effect
-let buttons = document.getElementsByClassName("menuButton");
+let buttons = document.querySelectorAll("button, a");
 for (let button of buttons) {
     button.addEventListener("mouseenter", () => {
         button.style.backgroundColor = "#01fc01b0";
@@ -158,7 +173,7 @@ ambienceAudio.volume = 0.05;
 window.addEventListener("click", () => {
     if (audio.paused) {
         let randomIndex = Math.floor(Math.random() * tracks.length);
-        pageSwitch("menuScreen");
+        screenSwitch("menuScreen");
         playTrack(randomIndex);
         ambienceAudio.play().catch(e => console.log("Click page to play ambience"));
     }

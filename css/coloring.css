@@ -45,6 +45,24 @@ html, a, hr, button {
   border-bottom-color: #888960;
 }
 
+#outerDetail1 {
+  background-image: linear-gradient(to bottom, #d2c5ad 0%,  #2a2f16);
+  border-color: #5c5a51;
+}
+
+#outerDetail2 {
+  background-color: #737058;
+  border-color: #5c5a51;
+}
+#outerDetail3 {
+  background-image: linear-gradient(to bottom, #d2c5ad 30%,  #2a2f16);
+  border-color: #5c5a51;
+}
+#outerDetail4 {
+  background-color: #d2c5ad;
+  border-color: #5c5a51;
+}
+
 #monitorBackground {
   background-color: #000;
 }

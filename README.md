@@ -8,7 +8,7 @@ This project does not need to be perfect, one's personal portfolio is always evo
 
 Just like our previous project, you will be building this as a single page website, unless you want to go above and beyond. You will be required to create and submit a wireframe of your website here on Canvas, then build your website through the Github Classroom link.
 
-### A good developer portfolio should contain the following sections:
+## A good developer portfolio should contain the following sections:
 
 ## Header / Hero
 
