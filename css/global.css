@@ -237,7 +237,7 @@ ul {
   align-items: center;
 }
 
-#aboutMeText {
+#infoText {
   font-size: 25px;
 }
 
@@ -257,4 +257,21 @@ ul {
 
 #certificationsText {
   margin-top: 40px;
+}
+
+#aboutMe {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+}
+
+#aboutMe div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+#avatar {
+  width: 30%;
 }
