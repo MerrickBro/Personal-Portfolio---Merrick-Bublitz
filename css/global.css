@@ -1,3 +1,5 @@
+@import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
+
 @font-face {
   font-family: "3270";
   src:
@@ -111,7 +113,7 @@ p {
   overflow: visible;
   width: 300%;
   height: 100px;
-  background-image: linear-gradient(to bottom, #d2c5ad,  #2a2f16);
+  background-image: linear-gradient(to bottom, #d2c5ad, #2a2f16);
   border: 3px solid;
   margin-bottom: -15px;
 }
@@ -197,7 +199,7 @@ p {
   z-index: 50;
 }
 
-hr {
+.divider {
   width: 100%;
   border: none;
   height: 2px;
@@ -229,6 +231,8 @@ ul {
 
 .menuButton {
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #startingScreen {
@@ -237,14 +241,28 @@ ul {
   align-items: center;
 }
 
-#infoText {
+.infoText {
   font-size: 25px;
 }
 
-.sectionHeader {
+.project,
+.experience {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titleReturn {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.screenContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100%;
 }
 
 #musicPlayer {
@@ -274,4 +292,26 @@ ul {
 
 #avatar {
   width: 30%;
+}
+
+#contactLine {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  transform: translateY(-70px);
+  font-family: "NMSGeoSans", "3270";
+}
+
+#socials {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
+hr {
+  height: 100%;
+  border: 1px solid;
+  margin: 5px;
+  height: 100%;
+  width: 1px;
 }

@@ -1,14 +1,11 @@
-/* font-family: NMSFuturaProBook */
-@import url("https://font.nmscd.com/assets/font/NMSFuturaProBook_Kerned/Web-TT/NMSFuturaProBook_Kerned.css");
-/* font-family: NMSGeoSans */
-@import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
-
 html {
   background-color: #a3a599;
   color: #01fc01;
 }
 
-html, a, hr, button {
+html,
+a,
+button {
   color: #01fc01;
 }
 
@@ -46,7 +43,7 @@ html, a, hr, button {
 }
 
 #outerDetail1 {
-  background-image: linear-gradient(to bottom, #d2c5ad 0%,  #2a2f16);
+  background-image: linear-gradient(to bottom, #d2c5ad 0%, #2a2f16);
   border-color: #5c5a51;
 }
 
@@ -55,7 +52,7 @@ html, a, hr, button {
   border-color: #5c5a51;
 }
 #outerDetail3 {
-  background-image: linear-gradient(to bottom, #d2c5ad 30%,  #2a2f16);
+  background-image: linear-gradient(to bottom, #d2c5ad 30%, #2a2f16);
   border-color: #5c5a51;
 }
 #outerDetail4 {
@@ -71,6 +68,22 @@ html, a, hr, button {
   background-color: #282b26;
 }
 
-hr {
+.divider {
   background-image: linear-gradient(to right, #01fc01 75%, transparent 25%);
+}
+
+hr {
+  background-color: #2a2f16;
+  border-color: #5c5a51;
+}
+
+#contactLine,
+#socials,
+#socials a {
+  color: #2a2f16;
+  text-shadow:
+    -1px -1px 0 #5c5a51,
+    1px -1px 0 #5c5a51,
+    -1px 1px 0 #5c5a51,
+    1px 1px 0 #5c5a51;
 }

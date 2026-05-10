@@ -25,40 +25,42 @@
                                 <div id="monitorBackground">
                                     <div id="monitorDetail"></div>
                                     <div id="startingScreen" class="active">
-                                        <hr>
+                                        <hr class="divider">
                                         <p>> ENTER</p>
-                                        <hr>
+                                        <hr class="divider">
                                     </div>
                                     <div id="menuScreen" class="inactive">
                                         <div id="menuIntro">
                                             <p>> WELCOME</p>
-                                            <hr>
+                                            <hr class="divider">
                                             <div id="aboutMe">
                                                 <div>
                                                     <p>> ABOUT ME</p>
-                                                    <p id="infoText">
-                                                        <br>My name is Merrick Bublitz, I am a student in Michigan, currently attending Western High School, and The BAISD Career Center.
+                                                    <p class="infoText">
                                                         <br>
-                                                        <br>I currently aspire to become a game dev or software engineer in California, but after working on this page, I'm now considering web development.
+                                                        My name is Merrick Bublitz, I am a student in Michigan, currently attending Western High School and The BAISD Career Center.
+                                                        <br>
+                                                        <br>
+                                                        I currently aspire to become a game dev or software engineer in California, but after working on this page, I'm now considering web development.
                                                     </p>
                                                 </div>
                                                 <img id="avatar" src="assets/Avatar.jpg" alt="My Avatar">
                                             </div>
-                                            <hr>
+                                            <hr class="divider">
                                         </div>
                                         <div id="menuButtons">
-                                        <button id="skillsButton" class="menuButton" onclick="screenSwitch('skillsScreen')">
-                                            > SKILLS
-                                            <p id="infoText">These are some of the skills I have acquired, and certifications.</p>
-                                        </button>
-                                        <button id="projectsButton" class="menuButton" onclick="screenSwitch('projectsScreen')">
-                                            > PROJECTS
-                                            <p id="infoText">These are some of the projects I have worked on, and am currently working on.</p>
-                                        </button>
-                                        <button id="experienceButton" class="menuButton" onclick="screenSwitch('experienceScreen')">
-                                            > EXPERIENCE
-                                            <p id="infoText">These are some of the experiences I've had.</p>
-                                        </button>
+                                            <button id="skillsButton" class="menuButton" onclick="screenSwitch('skillsScreen')">
+                                                > SKILLS
+                                                <p class="infoText">These are some of the skills I have acquired, and certifications.</p>
+                                            </button>
+                                            <button id="projectsButton" class="menuButton" onclick="screenSwitch('projectsScreen')">
+                                                > PROJECTS
+                                                <p class="infoText">These are some of the projects I have worked on, and am currently working on.</p>
+                                            </button>
+                                            <button id="experienceButton" class="menuButton" onclick="screenSwitch('experienceScreen')">
+                                                > EXPERIENCE
+                                                <p class="infoText">These are some of the experiences I've had.</p>
+                                            </button>
                                         </div>
                                         <div id="musicPlayer">
                                             > MUSIC PLAYER
@@ -77,67 +79,149 @@
                                     </div>
                                     <div id="skillsScreen" class="inactive">
                                         <div id="skillsHeader" class="sectionHeader">
-                                            > SKILLS
-                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
-                                                RETURN
-                                            </button>
+                                            <div class="titleReturn">
+                                                > SKILLS
+                                                <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                    RETURN
+                                                </button>
+                                            </div>
+                                            <hr class="divider">
                                         </div>
-                                        <hr>
-                                        <ul>
-                                            <li>Java</li>
-                                            <li>Python</li>
-                                            <li>JavaScript</li>
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>Git</li>
-                                            <li>SQL</li>
-                                            <li>VS Code</li>
-                                            <li>OOP</li>
-                                            <li>Troubleshooting</li>
-                                            <li>Data Structures</li>
-                                        </ul>
-                                        <p id="certificationsText">> CERTIFICATIONS</p>
-                                        <ul>
-                                            <li>
-                                                BAISD Career Center - Student Success Certificate,
-                                                <br>
-                                                ISS: 04/2026
-                                            </li>
-                                            <li>
-                                                IC3 Digital Literacy Certification GS6 Master,
-                                                <br>
-                                                ISS: 04/2026
-                                            </li>
-                                            <li>
-                                                IT Specialist - Java,
-                                                <br>
-                                                EXP: 04/2031
-                                            </li>
-                                        </ul>
+                                        <div id="skillsContent" class="screenContent">
+                                            <ul>
+                                                <li>Java</li>
+                                                <li>Python</li>
+                                                <li>JavaScript</li>
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>Git</li>
+                                                <li>SQL</li>
+                                                <li>VS Code</li>
+                                                <li>OOP</li>
+                                                <li>Troubleshooting</li>
+                                                <li>Data Structures</li>
+                                            </ul>
+                                            <p id="certificationsText">> CERTIFICATIONS</p>
+                                            <ul>
+                                                <li>
+                                                    BAISD Career Center - Student Success Certificate,
+                                                    <br>
+                                                    ISS: 04/2026
+                                                </li>
+                                                <li>
+                                                    IC3 Digital Literacy Certification GS6 Master,
+                                                    <br>
+                                                    ISS: 04/2026
+                                                </li>
+                                                <li>
+                                                    IT Specialist - Java,
+                                                    <br>
+                                                    EXP: 04/2031
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div id="projectsScreen" class="inactive">
                                         <div id="projectsHeader" class="sectionHeader">
-                                            > PROJECTS
-                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
-                                                RETURN
-                                            </button>
+                                            <div class="titleReturn">
+                                                > PROJECTS
+                                                <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                    RETURN
+                                                </button>
+                                            </div>
+                                            <hr class="divider">
                                         </div>
-                                        <hr>
-                                        <p>PROJECTS GO HERE</p>
+                                        <div id="skillsContent" class="screenContent">
+                                            <div class="project">
+                                                <a class="projectTitle" href="https://merrickbublitzportfolio.merrickab90.workers.dev" target="_blank">PORTFOLIO WEBSITE</a>
+                                                <p class="projectDescription infoText">
+                                                    This is what you're currently viewing! Took about a week, but I'm proud of how it turned out considering how new I am to web development. I've learned even more about HTML, CSS, and JavaScript, while being fun with what I do at the same time.
+                                                    <ul>
+                                                        <li class="infoText">Made for Career Center - 2026</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="project">
+                                                <a class="projectTitle" href="https://mer-and-axolotl.merrickab90.workers.dev" target="_blank">MER AND AXOLOTL</a>
+                                                <p class="projectDescription infoText">
+                                                    This is my first website, it's a simple info site about axolotls. Took a week to make and was great learning HTML, CSS, and JavaScript.
+                                                    <ul>
+                                                        <li class="infoText">Made for Career Center - 2026</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="project">
+                                                <a class="projectTitle" href="https://noteworthyplanets.merrickab90.workers.dev" target="_blank">NOTEWORTHY PLANETS</a>
+                                                <p class="projectDescription infoText">
+                                                    This is my second website, based off of an old personal project I made in
+                                                    <a href="https://studio.code.org/projects/applab/wf2cKsIWLvcOiZOZt6GzbX3Iy22Bg2K4ek3GHseQ08A" target="_blank">code.org</a>
+                                                    my freshman year of high school. Its purpose is sharing discovered planets from No Man's Sky. Currently a work in progress. I learned simple project structure and some JavaScript within this project using blocks.
+                                                    <ul>
+                                                        <li class="infoText">Made for Myself - 2026</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="project">
+                                                <a class="projectTitle" href="https://www.roblox.com/games/13724540991/Snowy-Confines" target="_blank">SNOWY CONFINES</a>
+                                                <p class="projectDescription infoText">
+                                                    This is an experience I made in Roblox. It's a simple exploration game, but it has taught me a lot about programming with OOP and bug fixing. Still adding simple things to it here and there.
+                                                    <ul>
+                                                        <li class="infoText">Made for Myself - 2023</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="experienceScreen" class="inactive">
                                         <div id="experienceHeader" class="sectionHeader">
-                                            > EXPERIENCE
-                                            <button class="backButton" onclick="screenSwitch('menuScreen')">
-                                                RETURN
-                                            </button>
+                                            <div class="titleReturn">
+                                                > EXPERIENCE
+                                                <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                    RETURN
+                                                </button>
+                                            </div>
+                                            <hr class="divider">
                                         </div>
-                                        <hr>
-                                        <p>EXPERIENCE GOES HERE</p>
+                                        <div id="skillsContent" class="screenContent">
+                                            <div class="experience">
+                                                <P class="experienceTitle">STATE PARK CLEANUP
+                                                </a>
+                                                <p class="experienceDescription infoText">
+                                                    I participated in picking up garbage at our local state park with all of the IT students at the Career Center. Grabbed a lot of trash and communicated with my peers while doing so.
+                                                    <ul>
+                                                        <li class="infoText">Career Center - 2025</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="experience">
+                                                <P class="experienceTitle">BPA - REGIONALS
+                                                </a>
+                                                <p class="experienceDescription infoText">
+                                                    I competed as a student in the Business Professionals of America regional competition at SVSU in the IT category. I practiced coding using Python and HTML. It was a great experience to compete with other students from around the area.
+                                                    <ul>
+                                                        <li class="infoText">Career Center - 2026</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="contactLine">
+                        - PROPERTY OF M // A // B -
+                        <nav id="socials">
+                            <hr>
+                            <p>merrickab90@gmail.com</p>
+                            <hr>
+                            <p>(989) 996-1519</p>
+                            <hr>
+                            <a href="https://www.linkedin.com/in/merrick-bublitz-9b0a25263/" target="_blank">LINKEDIN</a>
+                            <hr>
+                            <a href="https://github.com/MerrickBro" target="_blank">GITHUB</a>
+                            <hr>
+                        </nav>
                     </div>
                 </div>
                 <div id="outerDetail3"></div>

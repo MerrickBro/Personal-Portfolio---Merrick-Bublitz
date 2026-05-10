@@ -153,7 +153,9 @@ let screenSwitch = (targetScreen) => {
 
 // Simple button hover effect
 let buttons = document.querySelectorAll("button, a");
+let contactButtons = document.querySelectorAll("#contactLine a");
 for (let button of buttons) {
+    if (Array.from(contactButtons).includes(button)) continue;
     button.addEventListener("mouseenter", () => {
         button.style.backgroundColor = "#01fc01b0";
         button.style.color = "#fff";
