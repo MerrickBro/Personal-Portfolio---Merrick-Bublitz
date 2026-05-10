@@ -184,7 +184,7 @@ p {
   box-sizing: border-box;
   width: 97%;
   height: 97%;
-  filter: blur(4px);
+  filter: blur(6px);
   z-index: 49;
 }
 

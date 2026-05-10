@@ -65,7 +65,7 @@ button {
 }
 
 #monitorDetail {
-  background-color: #282b26;
+  background-image: linear-gradient(to top left, #151714, #2b2f2a 70%, #646665);
 }
 
 .divider {
