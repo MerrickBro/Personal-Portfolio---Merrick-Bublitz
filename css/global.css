@@ -19,6 +19,10 @@ body {
   height: 100%;
 }
 
+html {
+  filter: url(#pixelate);
+}
+
 * {
   cursor: none !important;
 }

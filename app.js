@@ -94,11 +94,23 @@ let visualX = 0;
 let cursorSpeed = 0.4;
 let tiltSpeed = 0.3;
 
+let currentZoom = 1;
+let targetZoom = 1;
+let zoomSmoothing = 0.1;
+const ZOOM_SPEED = 0.15;
+
 // Update mouse position on movement
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
+window.addEventListener("wheel", (e) => {
+    if (e.deltaY < 0) {
+        targetZoom = Math.min(2.0, targetZoom + ZOOM_SPEED);
+    } else {
+        targetZoom = Math.max(0.8, targetZoom - ZOOM_SPEED);
+    }
+}, { passive: true });
 
 // Animation loop for cursor and tilt smoothing
 function animate() {
@@ -107,6 +119,8 @@ function animate() {
     let distY = mouseY - destY;
     destX += distX * cursorSpeed;
     destY += distY * cursorSpeed;
+    let zoomDist = targetZoom - currentZoom;
+    currentZoom += zoomDist * zoomSmoothing;
 
     // Update pointer position
     pointer.style.left = destX + "px";
@@ -125,13 +139,19 @@ function animate() {
         visualX += (targetX - visualX) * tiltSpeed;
 
         // Calculate rotation and translation based on visualY
-        let rotationX = (visualY / centerY) * 20;
-        let translateY = (visualY / centerY) * 300;
-        let rotationY = (visualX / centerX) * 20;
-        let translateX = (visualX / centerX) * 200;
+        let rotationX = (visualY / centerY) * (20 * (currentZoom * .8));
+        let translateY = (visualY / centerY) * (300 * (currentZoom * .8));
+        let rotationY = (visualX / centerX) * (20 * (currentZoom * .8));
+        let translateX = (visualX / centerX) * (200 * (currentZoom * .8));
 
         // Apply rotation and translation to the visual element
-        visual.style.transform = `rotateX(${-rotationX}deg) translateY(${-translateY}px) rotateY(${rotationY}deg) translateX(${-translateX}px)`;
+        visual.style.transform = `
+            scale(${currentZoom}) 
+            rotateX(${-rotationX}deg) 
+            translateY(${-translateY}px) 
+            rotateY(${rotationY}deg) 
+            translateX(${-translateX}px)
+        `;
     }
 
     requestAnimationFrame(animate);
