@@ -244,15 +244,15 @@
                 height="100%"
             >
                 <feFlood
-                    x="4"
-                    y="4"
+                    x="2"
+                    y="2"
                     height="1"
                     width="1"
                 />
                 <feComposite width="2" height="2"/>
                 <feTile result="a"/>
                 <feComposite in="SourceGraphic" in2="a" operator="in"/>
-                <feMorphology operator="dilate" radius="1"/>
+                <feMorphology operator="dilate" radius=".5"/>
             </filter>
         </svg>
     </body>
