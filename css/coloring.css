@@ -87,3 +87,11 @@ hr {
     -1px 1px 0 #5c5a51,
     1px 1px 0 #5c5a51;
 }
+
+.volumeSlider::-webkit-slider-thumb {
+  background: #fff;
+}
+
+.volumeSlider {
+  background: #01fc01;
+}

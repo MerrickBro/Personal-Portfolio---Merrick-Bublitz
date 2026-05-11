@@ -323,14 +323,12 @@ ul {
   appearance: none;
   width: stretch;
   height: 10px;
-  background: #01fc01;
 }
 
 .volumeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: #fff;
   border-radius: 0px;
 }
 
