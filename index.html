@@ -61,6 +61,10 @@
                                                 > EXPERIENCE
                                                 <p class="infoText">These are some of the experiences I've had.</p>
                                             </button>
+                                            <button id="settingsButton" class="menuButton" onclick="screenSwitch('settingsScreen')">
+                                                > SETTINGS
+                                                <p class="infoText">Some settings for the website.</p>
+                                            </button>
                                         </div>
                                         <div id="musicPlayer">
                                             > MUSIC PLAYER
@@ -135,7 +139,7 @@
                                             <div class="project">
                                                 <a class="projectTitle" href="https://merrickbublitzportfolio.merrickab90.workers.dev" target="_blank">PORTFOLIO WEBSITE</a>
                                                 <p class="projectDescription infoText">
-                                                    This is what you're currently viewing! Took about a week, but I'm proud of how it turned out considering how new I am to web development. I've learned even more about HTML, CSS, and JavaScript, while being fun with what I do at the same time.
+                                                    This is what you're currently viewing! Took about a week, but I'm proud of how it turned out considering how new I am to web development. I've learned even more about HTML, CSS, and JavaScript, while having fun with what I do at the same time.
                                                     <ul>
                                                         <li class="infoText">Made for Career Center - 2026</li>
                                                     </ul>
@@ -207,6 +211,30 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="settingsScreen" class="inactive">
+                                        <div id="settingsHeader" class="sectionHeader">
+                                            <div class="titleReturn">
+                                                > SETTINGS
+                                                <button class="backButton" onclick="screenSwitch('menuScreen')">
+                                                    RETURN
+                                                </button>
+                                            </div>
+                                            <hr class="divider">
+                                        </div>
+                                        <div id="settingsContent" class="screenContent">
+                                            <button id="pixelationToggle" class="setting" onclick="togglePixelation()">
+                                                <p class="settingTitle">PIXELATION EFFECT:</p><p id="pixelationStatus">OFF</p>
+                                            </button>
+                                            <div id="ambientVolume" class="setting">
+                                                <p class="settingTitle volumeText">AMBIENT VOLUME:</p>
+                                                <input type="range" id="ambientSlider" class="volumeSlider" min="0" max="1" step="0.01" value="0.05">
+                                            </div>
+                                            <div id="musicVolume" class="setting">
+                                                <p class="settingTitle volumeText">MUSIC VOLUME:</p>
+                                                <input type="range" id="musicSlider" class="volumeSlider" min="0" max="1" step="0.01" value="0.1">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +280,7 @@
                 <feComposite width="2" height="2"/>
                 <feTile result="a"/>
                 <feComposite in="SourceGraphic" in2="a" operator="in"/>
-                <feMorphology operator="dilate" radius=".5"/>
+                <feMorphology operator="dilate" radius="1"/>
             </filter>
         </svg>
     </body>

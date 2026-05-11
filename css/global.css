@@ -19,10 +19,6 @@ body {
   height: 100%;
 }
 
-html {
-  filter: url(#pixelate);
-}
-
 * {
   cursor: none !important;
 }
@@ -250,9 +246,16 @@ ul {
 }
 
 .project,
-.experience {
+.experience,
+.setting {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titleReturn {
@@ -310,6 +313,25 @@ ul {
   display: flex;
   font-size: 30px;
   align-items: center;
+}
+
+.volumeText {
+  width: 500px;
+}
+
+.volumeSlider {
+  appearance: none;
+  width: stretch;
+  height: 10px;
+  background: #01fc01;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 0px;
 }
 
 hr {

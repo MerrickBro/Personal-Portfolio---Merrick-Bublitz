@@ -11,22 +11,22 @@ let currentAudioIndex = 0;
 let audio = new Audio();
 
 // Volume Control
-let slider = document.getElementById("volumeSlider");
+let musSlider = document.getElementById("musicSlider");
 
 let setVolume = (value) => {
     audio.volume = value / 2;
 };
 
 // Initialize slider and set volume
-if (slider) {
-    slider.value = 0.1;
+if (musSlider) {
+    musSlider.value = 0.1;
 
-    slider.addEventListener("input", () => {
-        setVolume(slider.value);
+    musSlider.addEventListener("input", () => {
+        setVolume(musSlider.value);
     });
 }
 
-setVolume(slider?.value ?? 0.1);
+setVolume(musSlider?.value ?? 0.1);
 
 // Current Track Display
 let displayCurrentTrackInfo = (index) => {
@@ -172,7 +172,7 @@ let screenSwitch = (targetScreen) => {
 }
 
 // Simple button hover effect
-let buttons = document.querySelectorAll("button, a");
+let buttons = document.querySelectorAll("button, a, .setting");
 let contactButtons = document.querySelectorAll("#contactLine a");
 for (let button of buttons) {
     if (Array.from(contactButtons).includes(button)) continue;
@@ -185,6 +185,29 @@ for (let button of buttons) {
         button.style.color = "inherit";
     });
 }
+
+
+
+// --== Settings ==--
+// Toggle Screen Pixelation Function, Apply filter: url(#pixelate); to HTML
+let pixelationStatus = document.getElementById("pixelationStatus");
+let ht = document.documentElement;
+    let togglePixelation = () => {
+    if (pixelationStatus.textContent === "ON") {
+        pixelationStatus.textContent = "OFF";
+        ht.style.filter = "none";
+    } else {
+        pixelationStatus.textContent = "ON";
+        ht.style.filter = "url(#pixelate)";
+    }
+};
+// Update ambient volume based on slider
+let ambSlider = document.getElementById("ambientSlider");
+ambSlider.addEventListener("input", () => {
+    ambienceAudio.volume = ambSlider.value / 2;
+});
+
+
 
 // --== Start Website ==--
 // Separate audio element for ambience
