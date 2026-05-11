@@ -10,23 +10,15 @@ let currentAudioIndex = 0;
 // Create audio element
 let audio = new Audio();
 
-// Volume Control
+// Initialize slider and set volume
 let musSlider = document.getElementById("musicSlider");
 
-let setVolume = (value) => {
-    audio.volume = value / 2;
-};
+musSlider.addEventListener("input", () => {
+    audio.volume = musSlider.value;
+});
 
-// Initialize slider and set volume
-if (musSlider) {
-    musSlider.value = 0.1;
-
-    musSlider.addEventListener("input", () => {
-        setVolume(musSlider.value);
-    });
-}
-
-setVolume(musSlider?.value ?? 0.1);
+musSlider.value = 0.1;
+audio.volume = musSlider.value;
 
 // Current Track Display
 let displayCurrentTrackInfo = (index) => {
@@ -94,6 +86,7 @@ let visualX = 0;
 let cursorSpeed = 0.4;
 let tiltSpeed = 0.3;
 
+// Variables for screen zooming
 let currentZoom = 1;
 let targetZoom = 1;
 let zoomSmoothing = 0.1;
@@ -104,6 +97,8 @@ document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
+
+// Update screen position on scroll
 window.addEventListener("wheel", (e) => {
     if (e.deltaY < 0) {
         targetZoom = Math.min(2.0, targetZoom + ZOOM_SPEED);
@@ -175,6 +170,7 @@ let screenSwitch = (targetScreen) => {
 let buttons = document.querySelectorAll("button, a, .setting");
 let contactButtons = document.querySelectorAll("#contactLine a");
 for (let button of buttons) {
+    // Don't highlight contact buttons
     if (Array.from(contactButtons).includes(button)) continue;
     button.addEventListener("mouseenter", () => {
         button.style.backgroundColor = "#01fc01b0";
@@ -189,18 +185,22 @@ for (let button of buttons) {
 
 
 // --== Settings ==--
-// Toggle Screen Pixelation Function, Apply filter: url(#pixelate); to HTML
+// Toggle Screen Pixelation Function
 let pixelationStatus = document.getElementById("pixelationStatus");
+// Declare HTML
 let ht = document.documentElement;
-    let togglePixelation = () => {
+
+let togglePixelation = () => {
     if (pixelationStatus.textContent === "ON") {
         pixelationStatus.textContent = "OFF";
         ht.style.filter = "none";
     } else {
         pixelationStatus.textContent = "ON";
+        // Apply filter to HTML
         ht.style.filter = "url(#pixelate)";
     }
 };
+
 // Update ambient volume based on slider
 let ambSlider = document.getElementById("ambientSlider");
 ambSlider.addEventListener("input", () => {
@@ -215,11 +215,12 @@ let ambienceAudio = new Audio("assets/LC Ship Ambience.flac");
 ambienceAudio.loop = true;
 ambienceAudio.volume = 0.05;
 
+// Page gets clicked for the first time, now allowed to play audio
 window.addEventListener("click", () => {
     if (audio.paused) {
         let randomIndex = Math.floor(Math.random() * tracks.length);
         screenSwitch("menuScreen");
         playTrack(randomIndex);
         ambienceAudio.play().catch(e => console.log("Click page to play ambience"));
-    }
+    } w
 }, { once: true });

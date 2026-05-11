@@ -326,6 +326,10 @@ ul {
   align-items: center;
 }
 
+#pixelationStatus {
+  width: 30%;
+}
+
 .volumeSlider {
   appearance: none;
   width: stretch;
