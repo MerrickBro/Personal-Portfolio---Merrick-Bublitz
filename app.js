@@ -103,7 +103,7 @@ window.addEventListener("wheel", (e) => {
     if (e.deltaY < 0) {
         targetZoom = Math.min(2.0, targetZoom + ZOOM_SPEED);
     } else {
-        targetZoom = Math.max(0.8, targetZoom - ZOOM_SPEED);
+        targetZoom = Math.max(0.75, targetZoom - ZOOM_SPEED);
     }
 }, { passive: true });
 
@@ -222,5 +222,6 @@ window.addEventListener("click", () => {
         screenSwitch("menuScreen");
         playTrack(randomIndex);
         ambienceAudio.play().catch(e => console.log("Click page to play ambience"));
+        targetZoom = 0.8
     } w
 }, { once: true });
