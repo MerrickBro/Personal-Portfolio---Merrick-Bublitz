@@ -319,6 +319,13 @@ ul {
   width: 500px;
 }
 
+#pixelationText {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .volumeSlider {
   appearance: none;
   width: stretch;
