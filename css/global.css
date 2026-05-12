@@ -21,6 +21,7 @@ body {
 
 * {
   cursor: none !important;
+  box-sizing: border-box;
 }
 
 .inactive {
